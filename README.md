@@ -43,6 +43,7 @@ To get started with the system monitoring, follow the steps below:
 - Flask
 - psutil
 - Flask-Session
+
 <!-- Installation Section -->
 
 ### Installation
