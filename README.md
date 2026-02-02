@@ -1,6 +1,6 @@
 <!-- ABOUT THE PROJECT -->
 
-## About The Project
+## About
 
 System Monitor is a Python-based application that allows users to monitor their system's CPU and memory usage in real-time.
 
