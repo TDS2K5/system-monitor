@@ -1,7 +1,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-The System Monitoring tool is a Python-based application that allows users to monitor their system's CPU and memory usage in real-time.
+System Monitor is a Python-based application that allows users to monitor their system's CPU and memory usage in real-time.
 
 ### Key features of this project:
 * Real-time Monitoring: The script uses the 'psutil' library to fetch real time CPU and Memory usage information. When a user enter the application through the web browser, the tool instantly provides the current CPU and Memory usage percentages.
