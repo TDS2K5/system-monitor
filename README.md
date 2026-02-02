@@ -16,7 +16,6 @@ The project is built with Python, HTML, JavaScript, and CSS. The following libra
 * [Chart.js](https://www.chartjs.org/)
 * [Flask-Session](https://flask-session.readthedocs.io/en/latest/)
 
-[![Python][Python]][Python-url] [![HTML5][HTML5]][HTML5-url] [![Flask][Flask]][Flask-url] [![JavaScript][JavaScript]][JavaScript-url]
 
 <!-- TO-DO Section -->
 ### To Do:
