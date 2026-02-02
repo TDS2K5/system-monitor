@@ -69,7 +69,9 @@ To get started with the system monitoring, follow the steps below:
    python3 app.py
    ```
 
-2. Open your web browser and navigate to http://localhost:5000/ to access the monitoring dashboard. (username: admin ; password: admin)
+2. Open your web browser and navigate to http://localhost:5000/ to access the monitoring dashboard.
+ (username: admin ; password: admin)
+ 
 3. Monitor your system's CPU and memory usage in real-time and view historical data for analysis.
 
 <!-- Docker Section -->
