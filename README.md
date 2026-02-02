@@ -96,6 +96,6 @@ Navigate to [http://localhost:5000/](http://localhost:5000/) on your browser to 
 
 ### Screenshots
 
-![Screenshot](static/images/login-screenshot.png)
 ![Screenshot](static/images/dashboard-screenshot.png)
-![Screenshot](static/images/darkmode-screenshot.png)
+![Screenshot](static/images/login-screenshot.png)
+
