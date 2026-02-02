@@ -18,14 +18,14 @@ The project is built with Python, HTML, JavaScript, and CSS. The following libra
 
 
 <!-- TO-DO Section -->
-### To Do:
+<!-- ### To Do:
 * Add historical CPU and memory usage data over different time periods.✕
 * Improve the HTML/CSS of the monitoring dashboard for a more user-friendly and visually appealing interface. ✓
 * Set up Docker for the application to enable easy deployment and management. ✓
 * add a login page to the application to allow multiple users to access the monitoring dashboard. ✓
 * Add a dark mode option to the monitoring dashboard. ✓
 * Add a feature to allow users to download the historical data as a CSV file. ✕
-* Add database functionality to the application to store historical data.✕
+* Add database functionality to the application to store historical data.✕ -->
 
 
 <!-- Getting Started Section -->
