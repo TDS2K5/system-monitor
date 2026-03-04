@@ -9,7 +9,7 @@ body {
     background-attachment: fixed;
     background-blend-mode: multiply;
     backdrop-filter: blur(8px);
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,13 +18,16 @@ body {
 
 .container {
     width: 90%;
-    max-width: 300px;
+    max-height: 100vh;
+    max-width: 700px;
     background-color: rgba(255, 255, 255, 0.95);
+    /* margin: 10px; */
     padding: 30px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
     position: relative;
     text-align: center;
+    transform: scale(0.98);
 }
 
 h1 {
@@ -44,11 +47,15 @@ h1 {
 }
 
 .alert {
+    display: inline-block;
     font-weight: bold;
+
     padding: 8px 15px;
     border-radius: 5px;
     margin-bottom: 10px;
     text-transform: uppercase;
+    text-align: center;
+    /* align-items: center; */
     font-size: 12px;
     font-family: 'Rubik', sans-serif;
 }
@@ -81,9 +88,9 @@ p {
 
 .update-time {
     position: absolute;
-    bottom: 10px; 
-    right: 10px; 
-    font-size: 10px; 
+    bottom: 10px;
+    right: 10px;
+    font-size: 10px;
     color: #777;
     font-weight: bold;
 }
@@ -120,20 +127,21 @@ p {
 }
 
 .dark-mode .fa-sun {
-    color: #ffd700; 
+    color: #ffd700;
 }
 
 .dark-mode .fa-moon {
-    color: #f0e68c; 
+    color: #f0e68c;
 }
 
 .light-mode .fa-sun {
-    color: #d99519; 
+    color: #d99519;
 }
 
 .light-mode .fa-moon {
-    color: #000000; 
+    color: #000000;
 }
+
 .logout-button-container {
     display: flex;
     justify-content: center;
@@ -155,6 +163,7 @@ p {
     background-color: #ccc;
     cursor: not-allowed;
 }
+
 #login-form.loading .login-button::after {
     content: "";
     display: inline-block;
@@ -166,16 +175,20 @@ p {
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }
+
 @keyframes spin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 
 .logout-button:hover {
-    background-color: #d9534f; 
+    background-color: #d9534f;
+}
+
 .error-message {
-    color: #f04e4e; 
+    color: #f04e4e;
     font-size: 12px;
     margin-top: 5px;
-}
 }
