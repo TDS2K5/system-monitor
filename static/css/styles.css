@@ -38,10 +38,9 @@ h1 {
 }
 
 .data {
-    padding: 5px;
+    padding: 15px;
     background-color: transparent;
     border: 1px solid black;
-    margin-top: 30px;
     text-align: center;
     border-radius: 10px;
 
@@ -98,18 +97,17 @@ p {
     font-weight: bold;
 }
 
+/* 2x2 Grid Layout */
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
 
 @media (max-width: 480px) {
-    h1 {
-        font-size: 28px;
-    }
-
-    .data {
-        padding: 20px;
-    }
-
-    p {
-        font-size: 14px;
+    .cards-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -182,8 +180,11 @@ p {
 
 .logout-glint {
     position: absolute;
-    inset: 0;
-    background: rgba(255, 255, 255, 0.2);
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    background: rgba(255, 215, 0, 0.4);
     transform: translateX(-100%);
     transition: transform 0.5s;
 }

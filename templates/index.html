@@ -11,34 +11,37 @@
 <body>
     <div class="container">
         <h1>System Monitoring Dashboard</h1>
-        <div class="data">
-            <h2>CPU Usage</h2>
-            <p><span id="cpu-usage">{{ cpu_usage }}%</span></p>
-            <canvas id="cpu-chart"></canvas>
-        </div>
-        <div class="data">
-            <h2>Memory Usage</h2>
-            <p><span id="mem-usage">{{ mem_usage }}%</span></p>
-            <canvas id="mem-chart"></canvas>
-        </div>
-        <div class="data">
-            <h2>Disk Usage</h2>
-            <p><span id="disk-usage">{{ disk_usage }}%</span></p>
-            <canvas id="disk-chart"></canvas>
-        </div>
-        <div class="data">
-            <h2>Network I/O</h2>
-            <div class="network-stats">
-                <div class="net-stat">
-                    <span class="net-label">&#9650; Sent</span>
-                    <span id="bytes-sent" class="net-value">{{ bytes_sent }} MB</span>
-                </div>
-                <div class="net-stat">
-                    <span class="net-label">&#9660; Received</span>
-                    <span id="bytes-recv" class="net-value">{{ bytes_recv }} MB</span>
+        <div class="cards-grid">
+            <div class="data">
+                <h2>CPU Usage</h2>
+                <p><span id="cpu-usage">{{ cpu_usage }}%</span></p>
+                <canvas id="cpu-chart"></canvas>
+            </div>
+            <div class="data">
+                <h2>Memory Usage</h2>
+                <p><span id="mem-usage">{{ mem_usage }}%</span></p>
+                <canvas id="mem-chart"></canvas>
+            </div>
+            <div class="data">
+                <h2>Disk Usage</h2>
+                <p><span id="disk-usage">{{ disk_usage }}%</span></p>
+                <canvas id="disk-chart"></canvas>
+            </div>
+            <div class="data">
+                <h2>Network I/O</h2>
+                <div class="network-stats">
+                    <div class="net-stat">
+                        <span class="net-label">&#9650; Sent</span>
+                        <span id="bytes-sent" class="net-value">{{ bytes_sent }} MB</span>
+                    </div>
+                    <div class="net-stat">
+                        <span class="net-label">&#9660; Received</span>
+                        <span id="bytes-recv" class="net-value">{{ bytes_recv }} MB</span>
+                    </div>
                 </div>
             </div>
         </div>
+        <br>
         <div class="data">
             <h2>Alerts</h2>
             <div id="msg" class="alert alert-ok"></div>
