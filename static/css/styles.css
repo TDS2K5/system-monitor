@@ -27,24 +27,25 @@ body {
     border-radius: 15px;
     position: relative;
     text-align: center;
-    transform: scale(0.98);
+    transform: scale(0.95);
 }
 
 h1 {
     font-size: 20px;
-    font-family: 'Rubik', sans-serif;
+    font-family: monospace;
     margin-bottom: 30px;
     color: #333;
 }
 
 .data {
     padding: 5px;
-    background-color: #f2f2f2;
-    border: 2px solid #ccc;
+    background-color: transparent;
+    border: 1px solid black;
     margin-top: 30px;
     text-align: center;
     border-radius: 10px;
-    font-family: 'Rubik', sans-serif;
+
+    font-family: monospace;
 }
 
 .alert {
@@ -58,7 +59,7 @@ h1 {
     text-align: center;
     /* align-items: center; */
     font-size: 12px;
-    font-family: 'Rubik', sans-serif;
+    font-family: monospace;
 }
 
 .alert-ok {
@@ -159,7 +160,7 @@ p {
     background: transparent;
     border: 1px solid #f04e4e;
     color: #f04e4e;
-    font-family: 'Rubik', sans-serif;
+    font-family: monospace;
     font-size: 12px;
     font-weight: bold;
     text-transform: uppercase;
@@ -220,4 +221,40 @@ p {
     color: #f04e4e;
     font-size: 12px;
     margin-top: 5px;
+}
+
+/* Network I/O */
+.network-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.net-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.net-label {
+    font-size: 11px;
+    color: #888;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.net-value {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    font-family: monospace;
+}
+
+.dark-mode .net-value {
+    color: #eee;
+}
+
+.dark-mode .net-label {
+    color: #aaa;
 }

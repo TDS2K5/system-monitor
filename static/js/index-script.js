@@ -1,5 +1,5 @@
-let cpuChart, memChart; 
-let countdownInterval; 
+let cpuChart, memChart, diskChart;
+let countdownInterval;
 
 $(document).ready(function () {
     function toggleDarkMode() {
@@ -26,11 +26,11 @@ $(document).ready(function () {
 function createChart(chartElement, data) {
     let backgroundColor;
     if (data > 80) {
-        backgroundColor = '#f04e4e'; 
+        backgroundColor = '#f04e4e';
     } else if (data > 40) {
-        backgroundColor = '#f0ad4e'; 
+        backgroundColor = '#f0ad4e';
     } else {
-        backgroundColor = '#5cb85c'; 
+        backgroundColor = '#5cb85c';
     }
 
     const ctx = chartElement.getContext('2d');
@@ -65,10 +65,16 @@ function updateCharts() {
         if (memChart) {
             memChart.destroy();
         }
+        if (diskChart) {
+            diskChart.destroy();
+        }
+
 
         cpuChart = createChart(document.getElementById('cpu-chart'), data.cpu_usage, 'CPU', '#5cb85c');
 
         memChart = createChart(document.getElementById('mem-chart'), data.mem_usage, 'Memory', '#f0ad4e');
+
+        diskChart = createChart(document.getElementById('disk-chart'), data.disk_usage, 'Disk', '#f0ad4e');
     }
 }
 
@@ -84,7 +90,7 @@ function updateNextUpdateTime(nextUpdate) {
         if (remainingTime <= 0) {
             clearInterval(countdownInterval);
         }
-    }, 1000); 
+    }, 1000);
 }
 
 function updateData() {
@@ -96,6 +102,9 @@ function updateData() {
             data = responseData;
             $("#cpu-usage").text(data.cpu_usage + "%");
             $("#mem-usage").text(data.mem_usage + "%");
+            $("#disk-usage").text(data.disk_usage + "%");
+            $("#bytes-sent").text(data.bytes_sent + " MB");
+            $("#bytes-recv").text(data.bytes_recv + " MB");
             $("#msg").text(data.msg);
 
             if (data.msg === "Warning") {

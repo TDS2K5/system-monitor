@@ -45,10 +45,15 @@ def logout():
 def data():
     cpu_usage = psutil.cpu_percent()
     mem_usage = psutil.virtual_memory().percent
+    disk_usage = psutil.disk_usage('/').percent
+    net_io = psutil.net_io_counters()
+    bytes_sent = round(net_io.bytes_sent / (1024 * 1024), 2)
+    bytes_recv = round(net_io.bytes_recv / (1024 * 1024), 2)
     msg = "OK"
     if cpu_usage > 80 or mem_usage > 80:
         msg = "Warning"
-    return jsonify(cpu_usage=cpu_usage, mem_usage=mem_usage, msg=msg)
+    return jsonify(cpu_usage=cpu_usage, mem_usage=mem_usage, disk_usage=disk_usage,
+                   bytes_sent=bytes_sent, bytes_recv=bytes_recv, msg=msg)
 
 
 @app.route("/")
@@ -57,7 +62,12 @@ def index():
         return redirect("/login")
     cpu_usage = psutil.cpu_percent()
     mem_usage = psutil.virtual_memory().percent
-    return render_template("index.html", cpu_usage=cpu_usage, mem_usage=mem_usage)
+    disk_usage = psutil.disk_usage('/').percent
+    net_io = psutil.net_io_counters()
+    bytes_sent = round(net_io.bytes_sent / (1024 * 1024), 2)
+    bytes_recv = round(net_io.bytes_recv / (1024 * 1024), 2)
+    return render_template("index.html", cpu_usage=cpu_usage, mem_usage=mem_usage,
+                           disk_usage=disk_usage, bytes_sent=bytes_sent, bytes_recv=bytes_recv)
 
 
 if __name__ == "__main__":
