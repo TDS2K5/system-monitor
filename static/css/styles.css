@@ -156,8 +156,8 @@ p {
     padding: 10px 20px;
     border-radius: 5px;
     background: transparent;
-    border: 1px solid #f04e4e;
-    color: #f04e4e;
+    border: 1px solid black;
+    color: red;
     font-family: monospace;
     font-size: 12px;
     font-weight: bold;
@@ -174,7 +174,7 @@ p {
 }
 
 .logout-button:hover {
-    background-color: #f04e4e;
+    background-color: red;
     color: #fff;
 }
 
