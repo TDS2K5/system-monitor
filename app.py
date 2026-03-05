@@ -7,6 +7,8 @@ key = os.urandom(8)
 app = Flask(__name__, static_folder='static')
 app.secret_key = key
 app.config['SESSION_TYPE'] = 'filesystem'
+app.config['TEMPLATES_AUTO_RELOAD'] = True
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 Session(app)
 
 
@@ -59,4 +61,4 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0',debug=True)
